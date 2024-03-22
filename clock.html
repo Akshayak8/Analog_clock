@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .img img {
+        height: 722px;
+        width: 1520px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -800px;
+        margin-left: 600px;
+        height: 600px;
+        z-index: -1;
+      }
+      .circleout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        background-color: rgb(64, 135, 186);
+        height: 280px;
+        width: 280px;
+        border-radius: 50%;
+        z-index: 0;
+      }
+      .circlein {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 2px solid black;
+        background-color: rgb(255, 255, 255);
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        font-size: 22px;
+      }
+      .line1 {
+        display: flex;
+        justify-content: center;
+        margin-left: 5px;
+        margin-top: 5px;
+      }
+      .line2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: -15px;
+        margin-left: 50px;
+        margin-right: 52px;
+      }
+      .line3 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-left: 22px;
+        margin-right: 25px;
+        margin-bottom: -50px;
+      }
+      .line4 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: -150px;
+        margin-left: 20px;
+        margin-right: 18px;
+      }
+      .line5 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-left: 30px;
+        margin-right: 29px;
+      }
+      .line6 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-left: 70px;
+        margin-right: 60px;
+      }
+      .line7 {
+        display: flex;
+        justify-content: center;
+        margin-top: -18px;
+      }
+      .stick {
+        display: flex;
+      }
+      .hour {
+        height: 8px;
+        width: 50px;
+        margin-top: 67px;
+        margin-left: 76px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 10px;
+      }
+      .minuate {
+        height: 150px;
+        width: 8px;
+        margin-top: 10px;
+        margin-bottom: 60px;
+        background: linear-gradient(
+          to top,
+          rgb(0, 0, 0) 50%,
+          rgba(255, 255, 255, 0) 50%
+        );
+        border-radius: 10px;
+        margin-top: -5px;
+        animation: rotateClock 3600s linear infinite;
+      }
+      .sec {
+        height: 4px;
+        width: 160px;
+        background: linear-gradient(
+          to right,
+          rgb(0, 0, 0) 50%,
+          rgba(255, 255, 255, 0) 50%
+        );
+        border-radius: 10px;
+        margin-top: 72px;
+        margin-left: -85px;
+        animation: rotateClock 60s linear infinite;
+      }
+      @keyframes rotateClock {
+        from {
+          transform: rotateZ(0deg);
+        }
+        to {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img">
+      <img src="background.png" alt="background image" />
+      <div class="container">
+        <div class="circleout">
+          <div class="circlein">
+            <div class="line1">
+              <h2>12</h2>
+            </div>
+            <div class="line2">
+              <h2>11</h2>
+              <h2>1</h2>
+            </div>
+            <div class="line3">
+              <h2>10</h2>
+              <h2>2</h2>
+            </div>
+            <div class="stick">
+              <div class="hour"></div>
+              <div class="minuate"></div>
+              <div class="sec"></div>
+            </div>
+            <div class="line4">
+              <h2>9</h2>
+              <h2>3</h2>
+            </div>
+            <div class="line5">
+              <h2>8</h2>
+              <h2>4</h2>
+            </div>
+            <div class="line6">
+              <h2>7</h2>
+              <h2>5</h2>
+            </div>
+            <div class="line7">
+              <h2>6</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
